@@ -57,6 +57,7 @@ const ColorSection = () => {
     const leftRef = useRef(null);
     const textRef = useRef(null);
 
+
     const { currentColor, changeColorContext } = useContext(ColorContext);
 
     useEffect(() => {
@@ -73,6 +74,7 @@ const ColorSection = () => {
 
     useLayoutEffect(() => {
         let Elem = sectionRef.current;
+
 
         let updateColor = (color, text, rgbColor) => {
             const colorObj = {

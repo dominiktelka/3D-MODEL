@@ -4,6 +4,7 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@react-three/drei": "^9.29.1",
     "@react-three/fiber": "^8.7.2",
     "gsap": "^3.11.1",

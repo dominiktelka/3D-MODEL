@@ -137,7 +137,7 @@ const PricingSection = () => {
 
     useEffect(() => {
         sectionRef.current.style.backgroundColor = `rgba(${currentColor.rgbColor},0.4)`;
-    }, []);
+    }, [currentColor]);
 
     let updateColor = (color, text, rgbColor) => {
         const colorObj = {

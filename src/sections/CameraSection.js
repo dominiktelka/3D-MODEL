@@ -32,7 +32,7 @@ const V2 = styled.video`
   top: 0;
   right: 40%;
   width: 60%;
-  height: 1auto;
+  height: auto;
 
   z-index: 1;
 
@@ -134,7 +134,6 @@ const CameraSection = () => {
             start: "top top",
             end: `bottom bottom`,
             scrub: 1,
-            // markers: true,
           },
           x: 100,
           opacity: 0,

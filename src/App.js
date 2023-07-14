@@ -16,17 +16,17 @@ function App() {
     <>
       <GlobalStyle/>
         <Quote/>
-        <PhoneModel/>
+        {/*<PhoneModel/>*/}
         <HeroSection/>
         <DesignSection/>
-        <DisplaySection/>
-        <ProcessorSection/>
-        <BatterySection/>
-        <ColorContextProvider>
-          <ColorSection/>
-          <CameraSection/>
-          <PricingSection/>
-        </ColorContextProvider>
+        {/*<DisplaySection/>*/}
+        {/*<ProcessorSection/>*/}
+        {/*<BatterySection/>*/}
+        {/*<ColorContextProvider>*/}
+        {/*  <ColorSection/>*/}
+        {/*  <CameraSection/>*/}
+        {/*  <PricingSection/>*/}
+        {/*</ColorContextProvider>*/}
     </>
   );
 }

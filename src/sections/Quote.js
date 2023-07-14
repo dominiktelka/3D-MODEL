@@ -43,7 +43,7 @@ const Text = styled.p`
     animation-duration: 2.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    animation-delay: ${props => props.delay};
+    animation-delay: ${(props) => props.delay};
     font-family: var(--fontL);
     background-image: linear-gradient(-45deg, var(--gradient));
     -webkit-background-clip: text;
@@ -51,10 +51,26 @@ const Text = styled.p`
   }
   
   .author{
-    width:80%;
+    width:100%;
     text-align: end;
     background-image: linear-gradient(-180deg, var(--gradient));
     font-family: var(--fontR);
+  }
+  
+  @media screen and (max-width: 1120px){
+    width:70%
+  }
+  @media screen and (max-width: 768px){
+    font-size: var(--fontmd);
+    height: var(--fontsm);
+  }
+  @media screen and (max-width: 640px){
+    width:90%
+  }
+  @media screen and (max-width: 480px){
+    font-size: var(--fontxs);
+    width:80%;
+    height: 10%;
   }
 `
 

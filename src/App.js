@@ -10,23 +10,25 @@ import ColorSection from "./sections/ColorSection";
 import PricingSection from "./sections/PricingSection";
 import {ColorContextProvider} from "./context/ColorContext";
 import CameraSection from "./sections/CameraSection";
+import InteractionSection from "./sections/InteractionSection";
 
 function App() {
   return (
     <>
       <GlobalStyle/>
         <Quote/>
-        {/*<PhoneModel/>*/}
+        <PhoneModel/>
         <HeroSection/>
         <DesignSection/>
-        {/*<DisplaySection/>*/}
-        {/*<ProcessorSection/>*/}
-        {/*<BatterySection/>*/}
-        {/*<ColorContextProvider>*/}
-        {/*  <ColorSection/>*/}
-        {/*  <CameraSection/>*/}
-        {/*  <PricingSection/>*/}
-        {/*</ColorContextProvider>*/}
+        <DisplaySection/>
+        <ProcessorSection/>
+        <BatterySection/>
+        <ColorContextProvider>
+          <ColorSection/>
+          <CameraSection/>
+          <PricingSection/>
+        </ColorContextProvider>
+        <InteractionSection/>
     </>
   );
 }

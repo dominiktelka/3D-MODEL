@@ -11,7 +11,6 @@ const Section =  styled.section`
   align-items: center;
   background-color: var(--dark);
   overflow: hidden;
-  justify-content: flex-end;
   align-content: center;
 `
 

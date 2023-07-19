@@ -5,7 +5,6 @@ import styled from "styled-components";
 const Title = styled.p`
   text-align: center;
   overflow-wrap: break-word;
-  
 `
 const CameraBox = styled.div`
   width:87px;

@@ -1,6 +1,7 @@
 {
   "files": {
-    "main.js": "./static/js/main.678381ab.js",
+    "main.css": "./static/css/main.747f0e25.css",
+    "main.js": "./static/js/main.397a362c.js",
     "static/media/Ink - 21536.mp4": "./static/media/Ink - 21536.210aa2b7cb71aa6ce53f.mp4",
     "static/media/Skate - 49791.mp4": "./static/media/Skate - 49791.79b13830ad762a9ccb26.mp4",
     "static/media/Scuba Diving - 699.mp4": "./static/media/Scuba Diving - 699.75e8d3961b352cb4aa0c.mp4",
@@ -10,6 +11,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/js/main.678381ab.js"
+    "static/css/main.747f0e25.css",
+    "static/js/main.397a362c.js"
   ]
 }

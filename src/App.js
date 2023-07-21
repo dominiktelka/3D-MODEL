@@ -11,6 +11,7 @@ import PricingSection from "./sections/PricingSection";
 import {ColorContextProvider} from "./context/ColorContext";
 import CameraSection from "./sections/CameraSection";
 import InteractionSection from "./sections/InteractionSection";
+import DinoGame from "./sections/DinoSection";
 
 function App() {
   return (

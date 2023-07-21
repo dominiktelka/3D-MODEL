@@ -14,24 +14,78 @@ code {
 
 .content{
   background-color: white;
-  border-radius:23px;
-  height:486px;
+  border-radius:3px 3px 23px 23px;
+  height:460px;
   width:227px;
-  margin-bottom: 2px;
-  overflow-y: scroll;
-}
-.content::-webkit-scrollbar{
-  width:10px;
-  border-radius: 2px;
-}
-.content::-webkit-scrollbar-thumb{
-  background: gray;
-  border-radius: 8px;
-}
-.content::-webkit-scrollbar-track{
-  background: #f1f1f1;
-  border-radius: 8px;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top:22px;
+  overflow: hidden;
+  transform: translate3d(0,0,0);
+  opacity: 1;
 }
 
+
+.game {
+  width: 227px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+
+.dino {
+  width: 50px;
+  height: 50px;
+  background-image: url("/public/img/trex.png");
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump 0.35s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 110px;
+  }
+
+  50% {
+    top: 60px;
+  }
+
+  80% {
+    top: 110px;
+  }
+
+  100% {
+    top: 150px;
+  }
+}
+
+.cactus {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+
+  background-image: url("/public/img/cactus.png");
+  background-size: 20px 40px;
+
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 200px;
+  }
+
+  100% {
+    left: -20px;
+  }
+}

@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useLayoutEffect} from 'react'
 import {Html, useGLTF} from '@react-three/drei'
 import HeroPage from '../sections/HeroPage'
 import "../index.css"
+import {useThree} from "@react-three/fiber";
+import gsap from "gsap";
+import DinoGame from "../sections/DinoSection";
 
 
 export function Model4(props) {
     const { nodes, materials } = useGLTF('./scene.gltf')
+
 
 
     return (
@@ -21,8 +25,8 @@ export function Model4(props) {
                     <mesh geometry={nodes.Body_Bezel_0.geometry} material={materials.Bezel} />
                     <mesh geometry={nodes.Body_Body_0.geometry} material={materials.Body} />
                     <mesh geometry={nodes.Body_Wallpaper_0.geometry} material={materials.Wallpaper}>
-                        <Html className="content" position={[0, 0, -0.0259]} occlude center transform={true} scale={0.078} rotation={[0,Math.PI,0]}>
-                                <HeroPage/>
+                        <Html className="content" position={[0, 0, -0.0259]} occlude transform={true} scale={0.078} rotation={[0,Math.PI,0]}>
+                            <DinoGame/>
                         </Html>
                     </mesh>
                     <mesh geometry={nodes.Body_Camera_Glass_0.geometry} material={materials.Camera_Glass} />
@@ -32,7 +36,8 @@ export function Model4(props) {
                     <mesh geometry={nodes.Camera_Glass_0.geometry} material={materials.Glass} />
                     <mesh geometry={nodes.Camera_Camera_Frame001_0.geometry} material={materials['Camera_Frame.001']} />
                     <mesh geometry={nodes.Camera_Mic_0.geometry} material={materials.material} />
-                    <mesh geometry={nodes.Body001_Screen_Glass_0.geometry} material={materials.Screen_Glass} />
+                    <mesh geometry={nodes.Body001_Screen_Glass_0.geometry} material={materials.Screen_Glass}>
+                    </mesh>
                     <mesh geometry={nodes.Button_Frame_0.geometry} material={materials.Frame} />
                     <mesh geometry={nodes.Circle003_Frame_0.geometry} material={materials.Frame} />
                     <mesh geometry={nodes.Apple_Logo_Logo_0.geometry} material={materials.Logo} />

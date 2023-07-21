@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react'
 import styled from 'styled-components'
 import {Model4} from "../Components/Scene4";
-import {ContactShadows, Environment, Html, OrbitControls, useGLTF} from "@react-three/drei";
+import {Environment,OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
 
 const Section =  styled.section`
@@ -39,7 +39,7 @@ const InteractionSection = () =>{
                     <Model4/>
                 </Suspense>
                 <Environment preset="warehouse" />
-                <OrbitControls enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
+                {/*<OrbitControls enableZoom={true} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />*/}
             </Canvas>
         </Section>
     )

@@ -9,29 +9,50 @@ export default function DinoGame() {
     const dinoRef = useRef(null)
     const cactusRef = useRef(null);
     const [score, setScore] = useState(0);
+    const [isTouchEnabled, setIsTouchEnabled]=useState(false);
 
 
     useEffect(()=>{
-        window.addEventListener("keydown",handleKeyDown);
-        window.addEventListener("touchstart",handleKeyDown)
+        if(isTouchEnabled){
 
+            window.addEventListener("touchstart",touch)
+            const isAlive = setInterval(checkCollision, 10);
+
+            return () =>{
+                window.removeEventListener("touchstart",touch)
+                clearInterval(isAlive);
+            }
+        }
+
+    },[isTouchEnabled]);
+
+    useEffect(()=>{
+        window.addEventListener("keydown",handleKeyDown);
         const isAlive = setInterval(checkCollision, 10);
 
         return () =>{
             window.removeEventListener("keydown",handleKeyDown)
-            window.addEventListener("touchstart",handleKeyDown)
             clearInterval(isAlive);
         }
-    },[]);
+    })
 
 
 
-    const handleKeyDown = event => {
+    const handleKeyDown = (event) => {
+    if(event.keyCode === 32){
         setIsActive(true);
-        cactusRef.current.style.animation = `block 1s infinite linear`
-        setScore((prevScore) => prevScore +1)
-            setTimeout(()=>{setIsActive(false)},300)
+        cactusRef.current.style.animation = `block 1s infinite linear`;
+        setScore((prevScore) => prevScore +1);
+        setTimeout(()=>{setIsActive(false)},300);
+        }
     };
+
+    const touch =(event) =>{
+        setIsActive(true);
+        cactusRef.current.style.animation = `block 1s infinite linear`;
+        setScore((prevScore) => prevScore +1);
+        setTimeout(()=>{setIsActive(false)},300);
+    }
 
     const checkCollision = () => {
         if (dinoRef.current && cactusRef.current) {
@@ -51,6 +72,7 @@ export default function DinoGame() {
                 if (cactusRef.current && dinoRef.current) {
                     cactusRef.current.style.animation = 'none';
                     setScore(0)
+                    setIsTouchEnabled(false)
                 }
             } else{
                 // setScore((prevScore) => prevScore +0.1)
@@ -58,9 +80,12 @@ export default function DinoGame() {
         }
     };
 
+    const handleTouchStart = () =>{
+        setIsTouchEnabled(true)
+    }
 
     return (
-        <div className="game" tabIndex={1}>
+        <div className="game" onTouchStart={handleTouchStart}>
             <div className="score">Score: {score}</div>
             <div ref={dinoRef} className={`dino ${isActive ?"jump" : ''}`}></div>
             <div ref={cactusRef} className="cactus"></div>

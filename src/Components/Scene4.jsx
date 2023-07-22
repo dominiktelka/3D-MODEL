@@ -1,14 +1,14 @@
-import React, {useLayoutEffect} from 'react'
+import React from 'react'
 import {Html, useGLTF} from '@react-three/drei'
-import HeroPage from '../sections/HeroPage'
-import "../index.css"
-import {useThree} from "@react-three/fiber";
-import gsap from "gsap";
 import DinoGame from "../sections/DinoSection";
+
 
 
 export function Model4(props) {
     const { nodes, materials } = useGLTF('./scene.gltf')
+
+
+
 
 
 
@@ -25,7 +25,7 @@ export function Model4(props) {
                     <mesh geometry={nodes.Body_Bezel_0.geometry} material={materials.Bezel} />
                     <mesh geometry={nodes.Body_Body_0.geometry} material={materials.Body} />
                     <mesh geometry={nodes.Body_Wallpaper_0.geometry} material={materials.Wallpaper}>
-                        <Html className="content" position={[0, 0, -0.0259]} occlude transform={true} scale={0.078} rotation={[0,Math.PI,0]}>
+                        <Html className="content" position={[0, 0, -0.0259]} occlude transform={true} scale={0.078} rotation={[0,Math.PI,0]} >
                             <DinoGame/>
                         </Html>
                     </mesh>

@@ -29,6 +29,7 @@ const Title = styled.h1`
 
 const InteractionSection = () =>{
 
+
     return(
         <Section>
             <Title>Simple example of how html works inside 3d model</Title>
@@ -36,7 +37,7 @@ const InteractionSection = () =>{
                 <ambientLight intensity={2.25}/>
                 <directionalLight intensity={0.4}/>
                 <Suspense fallback={null}>
-                    <Model4/>
+                    <Model4 />
                 </Suspense>
                 <Environment preset="warehouse" />
                 {/*<OrbitControls enableZoom={true} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />*/}

@@ -1,21 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
-import styled from "styled-components";
+
 import "../index.css"
-
-const Section = styled.div`
-
-`
-
-
-const Title = styled.div`
-
-`
-
 
 
 export default function DinoGame() {
-    const dino = document.getElementById("dino");
-    const cactus = document.getElementById("cactus");
+
     const [isActive, setIsActive] = useState(false);
     const dinoRef = useRef(null)
     const cactusRef = useRef(null);
@@ -54,7 +43,7 @@ export default function DinoGame() {
             const cactusLeft = parseInt(
                 window.getComputedStyle(cactusRef.current).getPropertyValue("left")
             );
-            
+
 
             if (cactusLeft < 45 && cactusLeft > 0 && dinoTop >= 140) {
                 alert("Game over")
@@ -71,7 +60,7 @@ export default function DinoGame() {
 
 
     return (
-        <div className="game">
+        <div className="game" tabIndex={1}>
             <div className="score">Score: {score}</div>
             <div ref={dinoRef} className={`dino ${isActive ?"jump" : ''}`}></div>
             <div ref={cactusRef} className="cactus"></div>

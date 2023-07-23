@@ -42,7 +42,6 @@ export default function DinoGame() {
     if(event.keyCode === 32){
         setIsActive(true);
         cactusRef.current.style.animation = `block 1s infinite linear`;
-        setScore((prevScore) => prevScore +1);
         setTimeout(()=>{setIsActive(false)},300);
         }
     };
@@ -50,9 +49,13 @@ export default function DinoGame() {
     const touch =(event) =>{
         setIsActive(true);
         cactusRef.current.style.animation = `block 1s infinite linear`;
-        setScore((prevScore) => prevScore +1);
         setTimeout(()=>{setIsActive(false)},300);
     }
+
+    const addPoints = () =>{
+        setScore((prevScore) => prevScore +1);
+    }
+
 
     const checkCollision = () => {
         if (dinoRef.current && cactusRef.current) {
@@ -74,8 +77,8 @@ export default function DinoGame() {
                     setScore(0)
                     setIsTouchEnabled(false)
                 }
-            } else{
-                // setScore((prevScore) => prevScore +0.1)
+            }else{
+               //setTimeout(addPoints,3000) this code is working but try latter to start it only when player press spacebar or touch the screen
             }
         }
     };

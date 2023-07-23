@@ -29,6 +29,7 @@ const Title = styled.h1`
   @media screen and (max-width: 480px){
     color: var(--white);
     left:1rem;
+    width:70%;
   }
 `
 

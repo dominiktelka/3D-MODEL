@@ -17,13 +17,20 @@ const Section =  styled.section`
   z-index: 1;
 `
 const Title = styled.h1`
-  position: absolute;
+  position:absolute;
+  margin: 0 auto;
   top: 5rem;
   left: 50%;
-  margin-left: -16%;
+  transform: translate(-50%,0);
   font-size:var(--fontlg);
   font-family: var(--fontL);
   color: var(--greyLight);
+  
+  @media screen and (max-width: 40em){
+    top:0;
+    margin:0 auto;
+    text-align: center;
+  }
   
 `
 

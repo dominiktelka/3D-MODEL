@@ -54,9 +54,6 @@ export default function DinoGame() {
         setTimeout(()=>{setIsActive(false)},300);
     }
 
-    const addPoints = () =>{
-        setScore((prevScore) => prevScore +1);
-    }
 
 
     const checkCollision = () => {
@@ -80,7 +77,7 @@ export default function DinoGame() {
                     setIsTouchEnabled(false)
                 }
             }else{
-               //setTimeout(addPoints,3000) this code is working but try latter to start it only when player press spacebar or touch the screen
+               //setTimeout(addPoints,3000) this code is working but try later to start it only when player press spacebar or touch the screen
             }
         }
     };
@@ -91,9 +88,10 @@ export default function DinoGame() {
 
     return (
         <div className="game" onTouchStart={handleTouchStart}>
-            <div className="score">Score: {score}</div>
+            <div className="score">Score:{score}</div>
             <div ref={dinoRef} className={`dino ${isActive ?"jump" : ''}`}></div>
             <div ref={cactusRef} className="cactus"></div>
+            <div className="ground"></div>
         </div>
     )
 }

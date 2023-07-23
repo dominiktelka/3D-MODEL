@@ -19,14 +19,14 @@ code {
   width:227px;
   margin-top:22px;
   overflow: hidden;
-  transform: translate3d(0,0,0);
+  /*transform: translate(113%,-111%);*/
   opacity: 1;
 }
 
 
 .game {
   width: 227px;
-  height: 200px;
+  height: 470px;
   border: 1px solid black;
   margin: auto;
 }
@@ -92,6 +92,7 @@ code {
   position: relative;
   top: 110px;
   left: 580px;
+  border-bottom: 1px solid black;
 
   background-image: url("/public/img/cactus.png");
   background-size: 20px 40px;
@@ -112,6 +113,14 @@ code {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 0;
+  top: 5%;
+  left: 2%;
+}
+
+.ground{
+  width: 227px;
+  position: relative;
+  top: 110px;
   left: 0;
+  border-bottom: 1px solid black;
 }

@@ -42,6 +42,7 @@ export default function DinoGame() {
     if(event.keyCode === 32){
         setIsActive(true);
         cactusRef.current.style.animation = `block 1s infinite linear`;
+        setScore((prevScore) => prevScore +1);
         setTimeout(()=>{setIsActive(false)},300);
         }
     };
@@ -49,6 +50,7 @@ export default function DinoGame() {
     const touch =(event) =>{
         setIsActive(true);
         cactusRef.current.style.animation = `block 1s infinite linear`;
+        setScore((prevScore) => prevScore +1);
         setTimeout(()=>{setIsActive(false)},300);
     }
 

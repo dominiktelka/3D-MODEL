@@ -13,23 +13,25 @@ code {
 }
 
 .content{
+  position: sticky;
   background-color: white;
   border-radius:3px 3px 23px 23px;
-  height:460px;
-  width:227px;
+  width:100%;
   margin-top:22px;
   overflow: hidden;
-  /*transform: translate(113%,-111%);*/
+  transform: translate(0%,0%);
   opacity: 1;
 }
 
 
 .game {
   width: 227px;
-  height: 470px;
+  height: 460px;
   border: 1px solid black;
   margin: auto;
+  /*cursor: pointer;*/
 }
+
 
 
 .dino {

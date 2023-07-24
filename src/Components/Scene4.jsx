@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {Html, useGLTF} from '@react-three/drei'
 import DinoGame from "../sections/DinoSection";
 
@@ -6,9 +6,6 @@ import DinoGame from "../sections/DinoSection";
 
 export function Model4(props) {
     const { nodes, materials } = useGLTF('./scene.gltf')
-
-
-
 
 
 
@@ -24,11 +21,7 @@ export function Model4(props) {
                     <mesh geometry={nodes.Body_Mic_0.geometry} material={materials.material} />
                     <mesh geometry={nodes.Body_Bezel_0.geometry} material={materials.Bezel} />
                     <mesh geometry={nodes.Body_Body_0.geometry} material={materials.Body} />
-                    <mesh geometry={nodes.Body_Wallpaper_0.geometry} material={materials.Wallpaper}>
-                        <Html className="content" position={[0, 0, -0.0259]} occlude transform={true} scale={0.078} rotation={[0,Math.PI,0]} >
-                            <DinoGame/>
-                        </Html>
-                    </mesh>
+                    <mesh geometry={nodes.Body_Wallpaper_0.geometry} material={materials.Wallpaper}/>
                     <mesh geometry={nodes.Body_Camera_Glass_0.geometry} material={materials.Camera_Glass} />
                     <mesh geometry={nodes.Body_Lens_0.geometry} material={materials.Lens} />
                     <mesh geometry={nodes.Body_Material_0.geometry} material={materials.Material} />

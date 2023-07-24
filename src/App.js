@@ -16,19 +16,19 @@ function App() {
 
   return (
     <>
-      <GlobalStyle/>
-        <Quote/>
-        <PhoneModel/>
-        <HeroSection/>
-        <DesignSection/>
-        <DisplaySection/>
-        <ProcessorSection/>
-        <BatterySection/>
-        <ColorContextProvider>
-          <ColorSection/>
-          <CameraSection/>
-          <PricingSection/>
-        </ColorContextProvider>
+      {/*<GlobalStyle/>*/}
+      {/*  <Quote/>*/}
+      {/*  <PhoneModel/>*/}
+      {/*  <HeroSection/>*/}
+      {/*  <DesignSection/>*/}
+      {/*  <DisplaySection/>*/}
+      {/*  <ProcessorSection/>*/}
+      {/*  <BatterySection/>*/}
+      {/*  <ColorContextProvider>*/}
+      {/*    <ColorSection/>*/}
+      {/*    <CameraSection/>*/}
+      {/*    <PricingSection/>*/}
+      {/*  </ColorContextProvider>*/}
         <InteractionSection/>
     </>
   );

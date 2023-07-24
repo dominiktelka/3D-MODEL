@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {Model4} from "../Components/Scene4";
 import {Environment,OrbitControls} from "@react-three/drei";
 import {Canvas} from "@react-three/fiber";
+import DinoGame from "./DinoSection";
 
 const Section =  styled.section`
   width: 100vw;
@@ -48,7 +49,9 @@ const InteractionSection = () =>{
                 </Suspense>
                 <Environment preset="warehouse" />
                 {/*<OrbitControls enableZoom={true} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />*/}
+                <DinoGame/>
             </Canvas>
+
         </Section>
     )
 }
